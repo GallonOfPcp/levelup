@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>LevelUp</title>
+  </head>
+  <body>
+
+      <header class="header">
+          <div class="container">
+              <h1 class="title">Level Up</h1>
+              <div class="header-main">
+                  <img src="assets/img/prod.png" alt="Product" width="291" height="451">
+                  <ol>
+                    <li>Первая характеристика</li>
+                    <li>Вторая характеристика</li>
+                    <li>Третья характеристика</li>
+                  </ol>
+              </div>
+              <button class="btn" type="button" name="button">Заказать</button>
+          </div>
+      </header>
+
+      <div class="product-info">
+          <div class="container">
+
+              <div class="product-info-inner">
+
+                  <div class="column first-column">
+                      <div class="product-info-item">
+                          <img src="assets/img/prod.png" alt="Product" width="180" height="180">
+                          <div class="">Первый ингредиент</div>
+                      </div>
+                      <div class="product-info-item">
+                          <img src="assets/img/prod.png" alt="Product" width="180" height="180">
+                          <div class="">Второй ингредиент</div>
+                      </div>
+                      <div class="product-info-item">
+                          <img src="assets/img/prod.png" alt="Product" width="180" height="180">
+                          <div class="">Третий ингредиент</div>
+                      </div>
+                  </div>
+
+                  <div class="product-info-img">
+                      <img src="assets/img/prod.png" alt="Product" width="291" height="451">
+                  </div>
+
+                  <div class="column second-column">
+                      <div class="product-info-item">
+                          <img src="assets/img/prod.png" alt="Product" width="180" height="180">
+                          <div class="">Четвертый ингредиент</div>
+                      </div>
+                      <div class="product-info-item">
+                          <img src="assets/img/prod.png" alt="Product" width="180" height="180">
+                          <div class="">Пятый ингредиент</div>
+                      </div>
+                      <div class="product-info-item">
+                          <img src="assets/img/prod.png" alt="Product" width="180" height="180">
+                          <div class="">Шестой ингредиент</div>
+                      </div>
+                  </div>
+
+              </div>
+              <button class="btn" type="button" name="button">Заказать</button>
+
+          </div>
+      </div>
+
+      <div class="reviews">
+          <div class="container">
+              <div class="review-item">
+                  <img class="review-photo" src="assets/img/doctor.png" alt="Reviewer" width="257" height="300">
+                  <div class="review-name">Имя человека</div>
+                  <p class="review-text">Карусель из трех элементов (отзывов). Каждый элемент должен состоять из фото, имени человека, оставившего отзыв, и текста отзыва. Фон: произвольный градиент или паттерн.</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="product-features">
+          <div class="container">
+
+            <div class="product-features-top">
+                <img class="product-features-img" src="assets/img/doctor.png" alt="Product" width="257" height="300">
+                <p class="product-features-text">Фото человека с продуктом (заменить продукт на картинке). Небольшое описание продукта. Ниже 3 характеристики продукта в виде списка в линию. Фон: произвольный градиент или паттерн. Кнопка заказать (должна скроллить к форме заказа)</p>
+            </div>
+
+            <ul class="product-features-list">
+                <li>Первая характеристика</li>
+                <li>Вторая характеристика</li>
+                <li>Третья характеристика</li>
+            </ul>
+
+            <button class="btn" type="button" name="button">Заказать</button>
+
+          </div>
+      </div>
+
+      <section class="order">
+          <div class="container">
+              <div class="order-top">
+                  <h2 class="order-title">Level Up</h2>
+
+                  <div class="order-timer">Таймер</div>
+              </div>
+
+              <div class="order-bottom">
+                  <div class="order-info">
+                      <img src="assets/img/prod.png" alt="Product" width="161" height="250">
+                      <br>
+                      <div class="prices">
+                          <span class="new-price">700$</span>
+                          <span class="old-price">1000$</span>
+                      </div>
+
+                  </div>
+
+                  <form class="order-form" action="index.html" method="post">
+                    <label class="label-name" for="name">Ваше имя:</label>
+                    <input class="input-name" type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                    <br>
+                    <label class="label-tel" for="tel">Ваш телефон:</label>
+                    <input class="input-tel" type="number" name="tel" id="tel" placeholder="+555-123-4567" required>
+                    <br>
+                    <input class="btn btn-order" type="submit" name="btn" value="Заказать">
+                  </form>
+              </div>
+
+
+          </div>
+      </section>
+  </body>
+</html>
