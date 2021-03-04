@@ -10,6 +10,9 @@
   <body>
 
       <header class="header">
+
+
+
           <div class="container">
               <h1 class="title">Level Up</h1>
               <div class="header-main">
@@ -22,6 +25,8 @@
               </div>
               <button class="btn" type="button" name="button">Заказать</button>
           </div>
+          <video class="video-bg" src="assets/video/video-bg.webm" width="100%" height="auto" loop muted autoplay controls>
+          </video>
       </header>
 
       <div class="product-info">
@@ -71,11 +76,32 @@
 
       <div class="reviews">
           <div class="container">
-              <div class="review-item">
-                  <img class="review-photo" src="assets/img/doctor.png" alt="Reviewer" width="257" height="300">
-                  <div class="review-name">Имя человека</div>
-                  <p class="review-text">Карусель из трех элементов (отзывов). Каждый элемент должен состоять из фото, имени человека, оставившего отзыв, и текста отзыва. Фон: произвольный градиент или паттерн.</p>
-              </div>
+            <div class="arrow-left"></div>
+            <div class="arrow-right active"></div>
+            <div class="carousel-container">
+
+
+
+                <div class="review-items">
+                    <div class="review-item active-slide">
+                        <img class="review-photo" src="assets/img/doctor.png" alt="Reviewer" width="257" height="300">
+                        <div class="review-name">Первое имя</div>
+                        <p class="review-text">Карусель из трех элементов (отзывов). Каждый элемент должен состоять из фото, имени человека, оставившего отзыв, и текста отзыва. Фон: произвольный градиент или паттерн.</p>
+                    </div>
+                    <div class="review-item">
+                        <img class="review-photo" src="assets/img/doctor.png" alt="Reviewer" width="257" height="300">
+                        <div class="review-name">Второе имя</div>
+                        <p class="review-text">Карусель из трех элементов (отзывов). Каждый элемент должен состоять из фото, имени человека, оставившего отзыв, и текста отзыва. Фон: произвольный градиент или паттерн.</p>
+                    </div>
+                    <div class="review-item">
+                        <img class="review-photo" src="assets/img/doctor.png" alt="Reviewer" width="257" height="300">
+                        <div class="review-name">Третье имя</div>
+                        <p class="review-text">Карусель из трех элементов (отзывов). Каждый элемент должен состоять из фото, имени человека, оставившего отзыв, и текста отзыва. Фон: произвольный градиент или паттерн.</p>
+                    </div>
+                </div>
+
+            </div>
+
           </div>
       </div>
 
@@ -131,5 +157,7 @@
 
           </div>
       </section>
+    <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/carousel.js"></script>
   </body>
 </html>
