@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: 'Raleway', sans-serif;
@@ -24,7 +27,7 @@ p {
 }
 .btn {
   width: 200px;
-  height: 50px;
+  min-height: 50px;
   background-color: #672963;
   border: 2px solid #e6af00;
   border-radius: 5px;
@@ -47,37 +50,67 @@ p {
 
 .header {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   text-align: center;
   background-color: #e6af00;
   position: relative;
   z-index: 0;
   overflow: hidden;
+  height: 100vh;
+}
+.header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 .title {
-  margin-bottom: 90px;
   text-transform: uppercase;
+  color: #e6af00;
+  background-color: #672963;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 15px 0;
 }
 .header-main {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 70px;
 }
+.btn-header {
+  width: 70%;
+}
 .video-bg {
   position: absolute;
-  top: -60px;
+  top: 0;
   left: 0;
   z-index: -100;
+  min-width: 100%;
+  min-height: 102%;
+}
+.header-list li {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #e6af00;
+  text-shadow: 1px 0px 3px #672963,
+  0px 1px 3px #672963,
+  -1px 0px 3px #672963,
+  0px -1px 3px #672963;
+}
+.header li:last-child {
+  margin-bottom: 0;
 }
 
 /* Product Info */
 
 .product-info {
-  background: linear-gradient(#e6af00, #672963);
-  padding-top: 40px;
-  padding-bottom: 30px;
+  background: linear-gradient(#5992b7, #4eb773);
+  padding: 70px 0;
   text-align: center;
+  border-bottom: 3px solid #b5b51b;
 }
 .product-info-inner {
   height: 100%;
@@ -91,7 +124,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
+  font-size: 19px;
 }
 .product-info-item {
   margin-bottom: 50px;
@@ -109,9 +143,10 @@ p {
 /* Reviews */
 
 .reviews {
-  background: linear-gradient(#672963, #e6af00);
+  background: linear-gradient(#4eb773, #5992b7);
   text-align: center;
-  padding: 40px 0;
+  padding: 100px 0;
+  border-bottom: 3px solid #b5b51b;
 }
 .carousel-container {
   width: 70%;
@@ -167,9 +202,11 @@ p {
 /* Product Features */
 
 .product-features {
-  background: linear-gradient(#e6af00, #672963);
-  padding: 40px 0;
+  background: linear-gradient(#5992b7, #4eb773);
+  padding-top: 100px;
+  padding-bottom: 80px;
   text-align: center;
+  border-bottom: 3px solid #b5b51b;
 }
 .product-features-top {
   display: flex;
@@ -177,7 +214,7 @@ p {
   align-items: center;
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .product-features-text {
   width: 40%;
@@ -187,7 +224,7 @@ p {
   margin: 0;
   padding: 0;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 .product-features-list li {
   display: inline-block;
@@ -201,8 +238,9 @@ p {
 /* Order */
 
 .order {
-  background: linear-gradient(#672963, #e6af00);
-  padding: 40px 0;
+  background: linear-gradient(#4eb773, #5992b7);
+  padding: 60px 0;
+  border-bottom: 3px solid #b5b51b;
 }
 .order-title,
 .order-timer {
@@ -254,6 +292,7 @@ p {
 }
 .label-name {
   margin-right: 60px;
+
 }
 .label-tel {
   margin-right: 30px;
@@ -262,11 +301,37 @@ p {
 .input-tel {
   width: 200px;
   height: 50px;
+  margin-top: 10px;
   margin-bottom: 10px;
   background-color: #eaeaea;
   border: none;
   outline: none;
   padding-left: 10px;
+}
+.input-for-hint {
+  position: relative;
+}
+.input-name-hint,
+.input-tel-hint {
+  width: 194px;
+  height: 25px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 13px;
+  color: #000000;
+  position: absolute;
+  top: -14px;
+  right: -194px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.input-name:focus ~ .input-name-hint {
+  opacity: 1;
+}
+.input-tel:focus ~ .input-tel-hint {
+  opacity: 1;
 }
 .input-tel::-webkit-outer-spin-button,
 .input-tel::-webkit-inner-spin-button {
@@ -274,5 +339,156 @@ p {
 }
 .btn-order {
   margin-top: 40px;
-  margin-left: 70px;
+}
+@media (max-width: 1100px) {
+  .header-main img {
+    transform: scale(0.8);
+  }
+  .product-info-img {
+    transform: scale(0.8);
+  }
+  .product-info-item {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 850px) {
+  .header {
+    height: auto;
+  }
+  .header-main img {
+    transform: scale(0.8);
+  }
+  .header-list li {
+    font-size: 20px;
+  }
+  .product-info-img {
+    transform: scale(0.8);
+  }
+  .product-info-item {
+    transform: scale(0.8);
+  }
+  .product-features-list li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .product-features-top {
+    width: 100%;
+  }
+  .order-bottom {
+    width: 100%;
+  }
+
+  .input-name-hint,
+  .input-tel-hint {
+    width: 200px;
+    top: 61px;
+    right: 0;
+  }
+}
+@media (max-width: 750px) {
+
+
+  .header-main {
+    flex-wrap: wrap;
+  }
+  .header-main img {
+    transform: scale(0.7);
+  }
+
+
+  .product-info {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .product-info-inner {
+    margin-bottom: 15px;
+  }
+  .column {
+    width: 43%;
+  }
+  .product-info-item {
+    transform: scale(0.7);
+    margin-bottom: 0;
+  }
+  .product-info-img {
+    display: none;
+  }
+
+
+  .reviews {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+
+  .product-features {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .product-features-top {
+    flex-wrap: wrap;
+  }
+  .product-features-img {
+    margin-bottom: 45px;
+  }
+  .product-features-text {
+    width: 90%;
+  }
+  .product-features-list li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .order {
+    padding: 40px 0;
+  }
+  .order-title {
+    margin-bottom: 20px;
+  }
+  .order-bottom {
+   flex-wrap: wrap;
+  }
+  .order-info {
+    margin-bottom: 23px;
+  }
+  .order-form {
+    text-align: center;
+  }
+  .label-name,
+  .label-tel {
+    margin-right: 0;
+  }
+  .input-name,
+  .input-tel {
+    margin-top: 10px;
+    margin-bottom: 23px;
+  }
+  .btn-order {
+    margin: 0;
+  }
+
+
+  .arrow-left {
+    left: 20px;
+    z-index: 100;
+  }
+  .arrow-right {
+    right: 20px;
+    z-index: 100;
+  }
+  .carousel-container {
+    width: 100%;
+  }
+
+}
+@media (max-width: 320px) {
+  .order-form {
+    width: 90%;
+  }
+  .label-name,
+  .label-tel {
+    margin-right: 0;
+  }
 }

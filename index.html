@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,15 +18,15 @@
               <h1 class="title">Level Up</h1>
               <div class="header-main">
                   <img src="assets/img/prod.png" alt="Product" width="291" height="451">
-                  <ol>
+                  <ol class="header-list">
                     <li>Первая характеристика</li>
                     <li>Вторая характеристика</li>
                     <li>Третья характеристика</li>
                   </ol>
               </div>
-              <button class="btn" type="button" name="button">Заказать</button>
+              <button class="btn btn-header" type="button" name="button">Заказать</button>
           </div>
-          <video class="video-bg" src="assets/video/video-bg.webm" width="100%" height="auto" loop muted autoplay controls>
+          <video class="video-bg" src="assets/video/video-bg.webm" loop muted autoplay controls>
           </video>
       </header>
 
@@ -41,11 +42,11 @@
                       </div>
                       <div class="product-info-item">
                           <img src="assets/img/prod.png" alt="Product" width="180" height="180">
-                          <div class="">Второй ингредиент</div>
+                          <div class="">Третий ингредиент</div>
                       </div>
                       <div class="product-info-item">
                           <img src="assets/img/prod.png" alt="Product" width="180" height="180">
-                          <div class="">Третий ингредиент</div>
+                          <div class="">Пятый ингредиент</div>
                       </div>
                   </div>
 
@@ -56,11 +57,11 @@
                   <div class="column second-column">
                       <div class="product-info-item">
                           <img src="assets/img/prod.png" alt="Product" width="180" height="180">
-                          <div class="">Четвертый ингредиент</div>
+                          <div class="">Второй ингредиент</div>
                       </div>
                       <div class="product-info-item">
                           <img src="assets/img/prod.png" alt="Product" width="180" height="180">
-                          <div class="">Пятый ингредиент</div>
+                          <div class="">Четвертый ингредиент</div>
                       </div>
                       <div class="product-info-item">
                           <img src="assets/img/prod.png" alt="Product" width="180" height="180">
@@ -84,17 +85,17 @@
 
                 <div class="review-items">
                     <div class="review-item active-slide">
-                        <img class="review-photo" src="assets/img/doctor.png" alt="Reviewer" width="257" height="300">
+                        <img class="review-photo" src="assets/img/review-man1.png" alt="Reviewer" width="257" height="194">
                         <div class="review-name">Первое имя</div>
                         <p class="review-text">Карусель из трех элементов (отзывов). Каждый элемент должен состоять из фото, имени человека, оставившего отзыв, и текста отзыва. Фон: произвольный градиент или паттерн.</p>
                     </div>
                     <div class="review-item">
-                        <img class="review-photo" src="assets/img/doctor.png" alt="Reviewer" width="257" height="300">
+                        <img class="review-photo" src="assets/img/review-man2.png" alt="Reviewer" width="257" height="194">
                         <div class="review-name">Второе имя</div>
                         <p class="review-text">Карусель из трех элементов (отзывов). Каждый элемент должен состоять из фото, имени человека, оставившего отзыв, и текста отзыва. Фон: произвольный градиент или паттерн.</p>
                     </div>
                     <div class="review-item">
-                        <img class="review-photo" src="assets/img/doctor.png" alt="Reviewer" width="257" height="300">
+                        <img class="review-photo" src="assets/img/review-man3.png" alt="Reviewer" width="257" height="194">
                         <div class="review-name">Третье имя</div>
                         <p class="review-text">Карусель из трех элементов (отзывов). Каждый элемент должен состоять из фото, имени человека, оставившего отзыв, и текста отзыва. Фон: произвольный градиент или паттерн.</p>
                     </div>
@@ -109,7 +110,7 @@
           <div class="container">
 
             <div class="product-features-top">
-                <img class="product-features-img" src="assets/img/doctor.png" alt="Product" width="257" height="300">
+                <img class="product-features-img" src="assets/img/doctor2.png" alt="Product" width="257" height="300">
                 <p class="product-features-text">Фото человека с продуктом (заменить продукт на картинке). Небольшое описание продукта. Ниже 3 характеристики продукта в виде списка в линию. Фон: произвольный градиент или паттерн. Кнопка заказать (должна скроллить к форме заказа)</p>
             </div>
 
@@ -129,7 +130,7 @@
               <div class="order-top">
                   <h2 class="order-title">Level Up</h2>
 
-                  <div class="order-timer">Таймер</div>
+                  <div class="order-timer"></div>
               </div>
 
               <div class="order-bottom">
@@ -145,10 +146,17 @@
 
                   <form class="order-form" action="index.html" method="post">
                     <label class="label-name" for="name">Ваше имя:</label>
-                    <input class="input-name" type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                    <div class="input-for-hint">
+                      <input class="input-name" type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                      <div class="input-name-hint">Например: Иван Иванов</div>
+                    </div>
                     <br>
                     <label class="label-tel" for="tel">Ваш телефон:</label>
-                    <input class="input-tel" type="number" name="tel" id="tel" placeholder="+555-123-4567" required>
+                    <div class="input-for-hint">
+                      <input class="input-tel" type="number" name="tel" id="tel" placeholder="+555-123-4567" required>
+                      <div class="input-tel-hint">Например: +555-123-4567</div>
+                    </div>
+
                     <br>
                     <input class="btn btn-order" type="submit" name="btn" value="Заказать">
                   </form>
@@ -159,5 +167,6 @@
       </section>
     <script src="assets/js/scroll.js"></script>
     <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/timer.js"></script>
   </body>
 </html>
