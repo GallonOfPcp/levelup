@@ -491,4 +491,8 @@ p {
   .label-tel {
     margin-right: 0;
   }
+  .input-name-hint,
+  .input-tel-hint {
+    right: 35px;
+  }
 }
