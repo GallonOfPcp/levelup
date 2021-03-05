@@ -310,6 +310,8 @@ p {
 }
 .input-for-hint {
   position: relative;
+  width: 200px;
+  margin: 0 auto;
 }
 .input-name-hint,
 .input-tel-hint {
@@ -490,9 +492,5 @@ p {
   .label-name,
   .label-tel {
     margin-right: 0;
-  }
-  .input-name-hint,
-  .input-tel-hint {
-    right: 35px;
   }
 }
